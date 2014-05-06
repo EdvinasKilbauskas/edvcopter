@@ -1,0 +1,12 @@
+Radio controlled arduino quadcopter project
+
+This is very simple arduino quadcopter project.
+
+Parts which are required to run this project:
+	* Any arduino
+	* MPU-6050
+	* RC receiver and transmitter
+	* 4 motors
+	* 4 ESC's
+	* A battery
+	* And a frame, of course

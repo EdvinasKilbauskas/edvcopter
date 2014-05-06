@@ -1,0 +1,7 @@
+Version 0.0.1 (2014-05-06)
+	* Simple stabilization implemented
+	* Receives input from radio transmitter, decodes radio receiver data
+	* Simple movement control
+	* Logging
+	* Can receive values from MPU-6050 sensor
+	
