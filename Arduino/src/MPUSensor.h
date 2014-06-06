@@ -26,6 +26,7 @@ private:
   
   Quaternion m_quaternion;                 // quaternion for mpu output
   VectorFloat m_gravity;                   // gravity vector for ypr
+  VectorInt16 m_accel;
  
   float m_YPRLast[3];
   float m_YPR[3];  
@@ -51,38 +52,27 @@ public:
      } 
   }
 
-  void waitTillReady()
+  boolean isReady()
   {
-    while(m_dataReady == false);
+    return m_dataReady;
   }
   
-  void log()
-  {   
-      //Serial.print("mpuIntStatus: "); Serial.print(m_mpuIntStatus);
-      //Serial.print("\tfifo count: "); Serial.print(m_fifoCount);
-      //Serial.print("\tready: "); Serial.print(m_dataReady);
-      Serial.print("Roll(X): "); Serial.print(getRoll(),3);
-      Serial.print("\tPitch(Y): "); Serial.print(getPitch(),3);
-      Serial.print("\tYaw(Z): "); Serial.print(getYaw(),3);
-  }
-
   void calculate()
   {
     m_dataReady = false;
     m_mpuIntStatus = m_mpu.getIntStatus();
     m_fifoCount = m_mpu.getFIFOCount();
     
-    //if((m_mpuIntStatus & 0x10) || m_fifoCount >= 1024){ 
-     // m_mpu.resetFIFO(); 
-    /*}else */if(m_mpuIntStatus & 0x02){    
-      /*while (m_fifoCount < m_packetSize)*/ m_fifoCount = m_mpu.getFIFOCount();
+      if(m_mpuIntStatus & 0x02){    
+      m_fifoCount = m_mpu.getFIFOCount();
   
-      m_mpu.getFIFOBytes(m_fifoBuffer, m_fifoCount);/*m_packetSize);*/
+      m_mpu.getFIFOBytes(m_fifoBuffer, m_fifoCount);
       
       m_fifoCount -= m_packetSize;
     
       m_mpu.dmpGetQuaternion(&m_quaternion, m_fifoBuffer);
       m_mpu.dmpGetGravity(&m_gravity, &m_quaternion);
+      m_mpu.dmpGetAccel(&m_accel, m_fifoBuffer);
       m_mpu.dmpGetYawPitchRoll(m_YPRLast, &m_quaternion, &m_gravity);
     }
     
@@ -106,6 +96,31 @@ public:
 
   float getRoll(){
     return m_YPR[2];
+  }
+  
+  float getAccelX(){
+     return m_accel.x/1000.0f;
+  }
+  
+  float getAccelY(){
+     return m_accel.y/1000.0f;
+  }
+  
+  float getAccelZ(){
+     return m_accel.z/1000.0f;
+  }
+  
+  
+  float getGyroX(){
+     return m_gravity.x;
+  }
+  
+  float getGyroY(){
+     return m_gravity.y;
+  }
+  
+  float getGyroZ(){
+     return m_gravity.z;
   }
   
 };

@@ -4,4 +4,8 @@ Version 0.0.1 (2014-05-06)
 	* Simple movement control
 	* Logging
 	* Can receive values from MPU-6050 sensor
+
+Version 0.0.2 (2014-05-21)
+	* Added visual data logger through Serial
+	* Added Processing source code for data logger
 	
