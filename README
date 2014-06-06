@@ -32,7 +32,7 @@ If you are using Leonardo then connect it to the 3rd pin.
 	3) Connect your quadcopter arduino through USB to Serial cable to your computer
 	4) Wait few seconds, and you should
 
-At this point my logging software is unfinished. I just wanted to quick way so see some data, and I have plans to improve it.
+At this point my logging software is unfinished and is barely useful. I just wanted to quick way so see some data, and I have plans to improve it.
 If anyone is interested in making it more appealing, adding more features and making it overall more useful, please be free to do so.
 Contact me if you have added some new features, I could update this repository with your code so everyone could use it.
 
