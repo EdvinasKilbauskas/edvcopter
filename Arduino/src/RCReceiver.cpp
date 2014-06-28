@@ -1,11 +1,11 @@
-#include "RCReceiver.h"
-#include "PinChangeInt.h"
-
 /*
  * Written by Edvinas Kilbauskas, 2014
  * You can contact me. Email: EdvinasKilbauskas@gmail.com
  * Github: http://github.com/EdvinasKilbauskas
  */
+
+#include "RCReceiver.h"
+#include "PinChangeInt.h"
 
 int RCReceiver::m_channels[6] = {0,0,0,0,0,0};
 int RCReceiver::m_channelsLast[6] = {0,0,0,0,0,0};
@@ -32,8 +32,8 @@ void RCReceiver::init(int ch1, int ch2, int ch3, int ch4, int ch5, int ch6, int 
 //
 float RCReceiver::getChannel(int index)
 {
-  
-  return (m_channels[index-1]-RC_LOW)/(RC_HIGH-RC_LOW);
+  float val = (m_channels[index-1]-RC_LOW)/(RC_HIGH-RC_LOW);
+  return val == -1.0f? 0.5f : val;
 }
 
 void RCReceiver::log()

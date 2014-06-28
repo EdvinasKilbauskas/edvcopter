@@ -1,3 +1,9 @@
+/*
+ * Written by Edvinas Kilbauskas, 2014
+ * You can contact me. Email: EdvinasKilbauskas@gmail.com
+ * Github: http://github.com/EdvinasKilbauskas
+ */
+
 #include <Wire.h>
 #include "MPUSensor.h"
 #include <Servo.h>

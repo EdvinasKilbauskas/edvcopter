@@ -250,9 +250,11 @@ void drawData(float startX, float startY, float space, float amp, float data[]) 
 }
 
 boolean readSerialData() {
-  int data[] = new int[26];
+  final int DATA_COUNT = 26;
+  
+  int data[] = new int[DATA_COUNT];
 
-    if (serialRead16(data, 26) == true) {
+    if (serialRead16(data, DATA_COUNT) == true) {
         
               if(data[0] == 1 && data[1] == 2 && data[2] == 3){
                 gyroX = data[3]/1000.0f;
@@ -282,6 +284,7 @@ boolean readSerialData() {
                 yawSp = data[24]/100.0f;
                 
                 arduinoDeltaTime = data[25]/10000.0f;
+                
                 return true;
            }
     }

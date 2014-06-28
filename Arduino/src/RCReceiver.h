@@ -1,11 +1,11 @@
-#ifndef RC_RECEIVER
-#define RC_RECEIVER
-
 /*
  * Written by Edvinas Kilbauskas, 2014
  * You can contact me. Email: EdvinasKilbauskas@gmail.com
  * Github: http://github.com/EdvinasKilbauskas
  */
+
+#ifndef RC_RECEIVER
+#define RC_RECEIVER
 
 #define RC_LOW 1000.0f
 #define RC_HIGH 2000.0f

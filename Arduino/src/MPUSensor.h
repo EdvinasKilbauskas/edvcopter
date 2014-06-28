@@ -1,3 +1,9 @@
+/*
+ * Written by Edvinas Kilbauskas, 2014
+ * You can contact me. Email: EdvinasKilbauskas@gmail.com
+ * Github: http://github.com/EdvinasKilbauskas
+ */
+
 #ifndef MPU_SENSOR_H_
 #define MPU_SENSOR_H_
 
@@ -5,11 +11,7 @@
 #include "helper_3dmath.h"
 #include "MPU6050_6Axis_MotionApps20.h"
 
-/*
- * Written by Edvinas Kilbauskas, 2014
- * You can contact me. Email: EdvinasKilbauskas@gmail.com
- * Github: http://github.com/EdvinasKilbauskas
- */
+
 
 class MPUSensor
 {
