@@ -5,6 +5,7 @@ This is very simple arduino quadcopter project.
 I recommend opening this with Arduinio IDE 1.0.5 or later
 
 1) Parts which are required to run this project:
+
 	* Any arduino
 	* MPU-6050
 	* RC receiver and transmitter
@@ -15,18 +16,22 @@ I recommend opening this with Arduinio IDE 1.0.5 or later
 
 2) How to connect MPU-6050 to your arduino?
 
+
 Connect them according to this table:
-Board				I2C / TWI pins
-Uno, Ethernet		A4 (SDA), A5 (SCL)
-Pro mini			A4 (SDA), A5 (SCL)
-Mega2560			20 (SDA), 21 (SCL)
-Leonardo			2 (SDA), 3 (SCL)
-Due					20 (SDA), 21 (SCL), SDA1, SCL1
+
+        Board                   |        I2C / TWI pins
+        -------------------------------------------------
+        *Uno, Ethernet          |        A4 (SDA), A5 (SCL)
+        *Pro mini               |        A4 (SDA), A5 (SCL)
+        *Mega2560               |        20 (SDA), 21 (SCL)
+        *Leonardo               |        2 (SDA), 3 (SCL)
+        *Due                    |        20 (SDA), 21 (SCL), SDA1, SCL1
 
 Also, you will have to connect INT pin from MPU-6050 to 2nd pin on UNO, Pro mini, DUE, Ethernet and Mega2560.
 If you are using Leonardo then connect it to the 3rd pin.
 
 3) How to start logging data from your quadcopter:
+
 	1) Compile and run logger located in Processing/src using Processing IDE
 	2) Disconnect any unnecessary USB devices connected to your computer (mobile phones, tablets, mp3 players etc)
 	3) Connect your quadcopter arduino through USB to Serial cable to your computer
