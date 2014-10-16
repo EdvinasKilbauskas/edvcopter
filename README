@@ -36,5 +36,8 @@ At this point my logging software is unfinished and is barely useful. I just wan
 If anyone is interested in making it more appealing, adding more features and making it overall more useful, please be free to do so.
 Contact me if you have added some new features, I could update this repository with your code so everyone could use it.
 
+Some info on how RC channels, controller and ESC's are interlocked:
+![alt tag](http://postimg.org/image/cx98h86kd/)
+
 
 You can contact me at EdvinasKilbauskas@gmail.com or at github http://github.com/EdvinasKilbauskas
