@@ -1,6 +1,6 @@
 Radio controlled arduino quadcopter project
 
-This is very simple arduino quadcopter project.
+This is very simple arduino quadcopter project. It's still far from finished, but it does kind of work.
 
 I recommend opening this with Arduinio IDE 1.0.5 or later
 
@@ -43,6 +43,10 @@ Contact me if you have added some new features, I could update this repository w
 
 Some info on how RC channels, controller and ESC's are interlocked:
 ![alt tag](http://s30.postimg.org/cx98h86kh/2014_10_16_18_33_12.jpg)
+
+Some videos showing how my quadcopter functions using this code:
+https://www.youtube.com/watch?v=enUAQP_ES2M
+https://www.youtube.com/watch?v=QN5GNv5YQQ0&list=UUeCGTW1pIbjfbPbLZzreOzQ
 
 
 You can contact me at EdvinasKilbauskas@gmail.com or at github http://github.com/EdvinasKilbauskas
