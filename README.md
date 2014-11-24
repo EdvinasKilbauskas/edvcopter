@@ -45,8 +45,8 @@ Some info on how RC channels, controller and ESC's are interlocked:
 ![alt tag](http://s30.postimg.org/cx98h86kh/2014_10_16_18_33_12.jpg)
 
 Some videos showing how my quadcopter functions using this code:
-https://www.youtube.com/watch?v=enUAQP_ES2M
 
+https://www.youtube.com/watch?v=enUAQP_ES2M
 https://www.youtube.com/watch?v=QN5GNv5YQQ0&list=UUeCGTW1pIbjfbPbLZzreOzQ
 
 
